@@ -29,22 +29,13 @@ const returnRandCheese = () =>{
 //Returns or not an extra topping
 const returnExtraTopping = () => {
     const giveExtraTopping = Math.floor(Math.random()*2);
-    if(giveExtraTopping)
-    {
-        return returnRandTopping();
-    }
-    else{
-        return;
-    }
+    return giveExtraTopping ? returnRandTopping() : '';
 }
-
-
 const burgerMaker = () => {
 
     const bun = returnRandBun();
     const topping = returnRandTopping();
     const cheese = returnRandCheese();
-    console.log(cheese);
     const extraTopping = returnExtraTopping();
     const sauce= returnRandSauce();
     const meat= returnRandMeat()
@@ -59,7 +50,7 @@ const burgerMaker = () => {
             return `Bun : ${this._bun}\n`;
         },
         get topping() {
-            return this._extraTopping ? `Toppings : ${this._topping}\nOh you look hungry ! Here an extra topping :  ${this._extraTopping}\n` :  `Topping : ${this._topping}\n`;
+            return this._extraTopping ? `Toppings : ${this._topping}\nOh you look hungry ! Here an extra one :  ${this._extraTopping}\n` :  `Topping : ${this._topping}\n`;
         },
         get cheese() {
             return `Cheese : ${this._cheese}\n`;
