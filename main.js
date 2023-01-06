@@ -31,6 +31,8 @@ const returnExtraTopping = () => {
     const giveExtraTopping = Math.floor(Math.random()*2);
     return giveExtraTopping ? returnRandTopping() : '';
 }
+
+// Create a random burger object
 const burgerMaker = () => {
 
     const bun = returnRandBun();
@@ -65,7 +67,7 @@ const burgerMaker = () => {
             return `Meat : ${this._meat}\n`;
         },
         get burgerIngredients() {
-            return this.bun + this.topping + this.sauce + this.meat + this.cheese ;
+            return `Here is your random ingredients to make a delicious burger!\n` + this.bun + this.topping + this.sauce + this.meat + this.cheese
         }
 
     }
