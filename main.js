@@ -26,12 +26,29 @@ const returnRandCheese = () =>{
     return cheeseList[(Math.floor(Math.random()*cheeseList.length))]
 }
 
+//Returns or not an extra topping
+const returnExtraTopping = () => {
+    const giveExtraTopping = Math.floor(Math.random()*2);
+    if(giveExtraTopping)
+    {
+        return returnRandTopping();
+    }
+    else{
+        return;
+    }
+}
+
+
+
+
+
 /* Test*/
-console.log(returnRandBun())
-console.log(returnRandSauce())
-console.log(returnRandTopping())
-console.log(returnRandMeat())
-console.log(returnRandCheese())
+// console.log(returnRandBun())
+// console.log(returnRandSauce())
+// console.log(returnRandTopping())
+// console.log(returnRandMeat())
+// console.log(returnRandCheese())
+// console.log(returnExtraTopping())
 
 
 
